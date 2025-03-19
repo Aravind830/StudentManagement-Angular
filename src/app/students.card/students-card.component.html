@@ -1,0 +1,46 @@
+<div *ngIf='!isDelt && studentss.length>0'>
+    <h2>Students Details..!</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>E-mail</th>
+                <th>Course</th>
+                <th>Entrolled Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stu of studentss">
+                <td>{{stu.id}}</td>
+                <td>{{stu.name}}</td>
+                <td>{{stu.age}}</td>
+                <td>{{stu.email}}</td>
+                <td>{{stu.course}}</td>
+                <td>{{stu.entrolledDate | date:'dd-MM-yyyy'}}</td>
+                <td>
+                    <button (click)="onAction('edit')">Edit</button>
+                    <button (click)="onRemove(stu.id)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="sortByAge">
+        <button (click)="onAction('add')">Add</button>
+        <button (click)="onAction('search')">Search</button>
+        <div class="dropDown">
+            <button (click)="onDrop()">Sort By Age</button>
+            <div *ngIf=isDrop class="dropDown-con">
+                <button (click)="onAction('Asc')">Ascending</button>
+                <button (click)="onAction('Desc')">Descending</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf='!isDelt && studentss.length<=0 && !isAdd'>
+        <h2>Students Not Available.! </h2>
+    </div>
+    <button (click)="onExit()">Log out</button>
+</div>

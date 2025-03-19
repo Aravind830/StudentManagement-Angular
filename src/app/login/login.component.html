@@ -1,0 +1,27 @@
+<div *ngIf=!isLogged>
+    <h2>Registeration Form</h2>
+    <form>
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="user.username" name="username">
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password" [(ngModel)]="user.password" name="password">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" [(ngModel)]="user.confirmPassword" name="confirm">
+        <p *ngIf=passMisMatch>{{passMisMatch}}</p>
+        <button (click)="onRegister()">Register</button>
+        <button (click)="onBack()">Back</button>
+    </form>
+    <p *ngIf=msg>{{msg}}</p>
+</div>
+
+<div *ngIf=isLogged>
+    <h2>Login/SignUp</h2>
+    <form>
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="user.username" name="username">
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password" [(ngModel)]="user.password" name="password">
+        <button (click)="onLog()">Login</button>
+        <button (click)="onSign()">Signup</button>
+    </form>
+</div>

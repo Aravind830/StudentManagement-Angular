@@ -1,8 +1,3 @@
-
-/* input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
 form {
     max-width: 400px;
     margin: 20px auto;
@@ -24,7 +19,7 @@ label {
     font-weight: bold;
 }
 
-input, select {
+input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -43,35 +38,4 @@ button{
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-}
-
-button[name="back"]{
-    width: 10%;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-table,p {
-    width: 60%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-thead {
-    background-color: #28a745;
-    color: white;
-}
-
-td, th {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-p{
-    text-align: center;
-    background-color: #28a745;
 }

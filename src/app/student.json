@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "2",
+      "name": "Arvi",
+      "age": 20,
+      "email": "aravi@gmail.com",
+      "course": "Python",
+      "entrolledDate": "2025-12-10T00:00:00Z"
+    }
+    ,{
+        "id": 3,
+        "name": "Vijay",
+        "age":30,
+        "email": "vj@gmail.com",
+        "course": "Python",
+        "entrolledDate":"2024-11-10T00:00:00Z"
+      },
+      {
+        "id": 3,
+        "name": "Ajith",
+        "age":28,
+        "email": "ak@gmail.com",
+        "course": "Java",
+        "entrolledDate":"2023-09-01T00:00:00Z"
+      }
+  ]
+}
